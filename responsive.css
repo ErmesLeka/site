@@ -47,6 +47,10 @@
     }
     .menu-icon{
         display: block;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        width: 100%;
+        z-index: 1;
     }
     .menu-icon img{
         padding: 10px;
@@ -57,7 +61,8 @@
     .nav-container{
         height: 0;
         display: none;
-        padding: 10px 0; 
+        padding: 10px 0;
+        margin-top: 50px;
     }
     .menu-btn:checked ~ .all-container > .nav-container{
         display: inherit;
