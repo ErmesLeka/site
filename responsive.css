@@ -81,7 +81,7 @@
     .option-nav img{
         display: none;
     }
-    .profile-picture{
+    .first-nav > .profile-picture{
         display: none;
     }
 
