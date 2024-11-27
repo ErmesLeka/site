@@ -102,8 +102,8 @@
     .write-message{
         width: 96%;
     }
-   .message-response > img{
-        width: 25px;
-        height: fit-content;
+    .message-response > img.profile-picture{
+        width: 30px;
+        height: 30px;
     }
 }
