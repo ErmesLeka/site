@@ -96,4 +96,8 @@
     .write-message{
         width: 96%;
     }
+    img.profile-picture{
+        width: 25px;
+        height: fit-content;
+    }
 }
