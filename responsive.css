@@ -67,6 +67,9 @@
         min-width: inherit;
         overflow-y: unset;
     }
+    .write-message{
+        padding: 5px 0;
+    }
     .write-message img{
         width: 20px;
         padding: 10px 4px;
