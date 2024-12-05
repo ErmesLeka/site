@@ -1,0 +1,637 @@
+Regole generali per il body
+html,
+body{
+    margin: 0;
+    /* padding-top: 55px; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+/* Regole per il contenitore generale, che conterrà tutto */
+.all-container{
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #f2f4f7;
+}
+/* Regole Generali per il contenitore dell'header */
+.nav-container{
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: fit-content;
+    min-height: 55px;
+    background-color: white;
+    z-index: 100;
+}
+.first-section{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    /* padding: 55px 0; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 white;   
+}
+/* Seconda sezione */
+.second-section{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex: 5;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 white;
+    scroll-behavior: smooth;
+}
+/* Terza sezione */
+.third-section{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    overflow-x: hidden;
+    /* background-color: antiquewhite; */
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: #c1c1c1 white;
+    min-width: 300px;
+    position: relative;
+}
+/* Applicando il display flex ai vari div dell'header */
+.nav-container,
+.left-nav,
+.center-nav,
+.right-nav,
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    /* gap: 10px; */
+}
+.nav-container img{
+    width: 30px;
+    height: 30px;
+}
+/* Primo div dell'header, left-nav - regole */
+.left-nav{
+    margin: 2px 0 0 16px;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+.search-bar{
+    background-color: #f0f2f5;
+    padding: 8px 5px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.search-bar img{
+    margin: 0 4px 0 8px;
+    width: 28px;
+    height: 28px;
+}
+.search-bar input{
+    border: 0;
+    outline: 0;
+    background-color: #f0f2f5;
+    font-size: 14px;
+}
+/* Secondo div dell'header, center-nav - regole */
+.center-nav{
+    min-width: 40%;
+}
+.center-nav img{
+    padding: 11px 30px;
+    border-bottom: 4px solid white;
+}
+.center-nav img:hover{
+    background-color: #f0f2f5;
+    border-color: #0866ff;
+}
+/* Terzo div dell'header, right-nav - regole */
+.right-nav img{ 
+    margin: 0 8px;
+    padding: 4px;
+    background-color: #f0f2f5;
+    border-radius: 50%;
+}
+.right-nav img:hover{
+    background-color: #e4e4e5;
+}
+/* Prima sezione - side-bar */
+.first-section-menu{
+    padding-top: 60px;
+}
+.first-section-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.first-section-box:hover{
+    background-color: #e6e7e7;
+}
+.first-section-box img{
+    width: 28px;
+    height: 28px;
+    margin: 10px;
+}
+/* Seconda sezione */
+/* seconda sezione - Stories */
+.stories-container{
+    width: 600px;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: #c1c1c1 white;
+    scrollbar-width: thin;
+    padding-top: 65px;
+}
+.stories-card{
+    min-width: 150px;
+    width: 170px;
+    height: 250px;
+    background-color: grey;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.background-image{
+    background-image: url(stories-img.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: brightness(80%);
+}
+.girl-one{
+    background-image: url(ragazzauno.jpg);
+}
+.girl-two{
+    background-image: url(ragazzadue.jpg);
+}
+.boy-one{
+    background-image: url(ragazzouno.jpg)
+}
+.boy-two{
+    background-image: url(ragazzo2.jpg)
+}
+.profile-container{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #0866ff;
+}
+.profile-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.name{
+    position: absolute;
+    z-index: 2;
+    bottom: 6px;
+    left: 10px;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    text-shadow: 0px 0px 20px #000000;
+}
+/* impostazioni prima storia */
+.first-stories-card{
+    min-width: 150px;
+    width: 170px;
+    height: 250px;
+    background-color: grey;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.first-stories-card:hover{
+    filter: brightness(85%);
+}
+.first-stories-img{
+    width: 100%;
+    object-fit: contain;
+    filter: brightness(90%);
+}
+.icon-first-stories{
+    width: 32px;
+    height: 32px;
+    background-color: #0866ff;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: -22px;
+}
+.first-stories-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.txt-first-stories{
+    margin: 0;
+    background-color: white;
+    text-align: center;
+    padding: 23px 10px 10px 10px;
+    font-size: 13px;
+}
+/* fine impostazioni prima storia */
+/* regole per lo stato */
+.state-container{
+    width: 500px;
+    margin-top: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.state-txt{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+}
+.state-txt img{
+    border-radius: 50%;
+    display: flex;
+    flex-grow: 0;
+    margin-left: 10px;
+}
+.state-txt input{
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #f0f2f5;
+    font-size: 15px;
+}
+.state-txt > input::placeholder{
+    padding-left: 10px;
+}
+.state-btn-box{
+    width: 95%;
+    margin: auto;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(201, 201, 201);
+}
+.state-btn-box img{
+    width: 30px;
+    /* margin-right: 10px; */
+}
+.state-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(86, 86, 86); */
+    padding: 6px 15px;
+    width: 50%;
+    border-radius: 10px;
+}
+.state-btn:hover{
+    background-color: rgb(232, 232, 232);
+}
+.state-btn button{
+    border: none;
+    background-color: inherit;
+    margin:  0;
+    font-size: 15px;
+    font-weight: 600;
+    color: grey;
+}
+/* Stile post */
+.post-container{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: fit-content;
+    margin-top: 15px;
+    background-color: white;
+    padding: 14px 0;
+    border-radius: 10px;
+}
+.head-post{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 14px;
+    margin-bottom: 10px;
+}
+/* container */
+.user-photo{
+    display: flex;
+    flex-grow: 0;
+    margin-right: 10px;
+}
+.user-photo img{
+    border-radius: 50%;
+}
+/* container */
+.user-info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.user-info p{
+    margin: 0;
+}
+.user-name{
+    color: black;
+    margin-top: 5px;
+}
+.post-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0;
+    color: #65686c;
+    font-size: 13px;
+}
+.post-info img{
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
+}
+/* container */
+.post-option{
+    display: flex;
+    flex-grow: 0;
+}
+.post-option img{
+    width: 30px;
+    padding: 3px;
+    border-radius: 50%;
+    margin: 2px;
+}
+.post-option img:hover{
+    background-color: #e4e4e5;
+}
+/* immagine del post */
+.image-post img{
+    width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+}
+/* like e commenti - box */
+.interactions-view{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    font-size: 15px;
+    color: #65686c;
+}
+.interactions-view img{
+    width: 22px;
+    height: 22px;
+}
+.interactions-view p{
+    margin: 0;
+}
+.interactions-view p:hover{
+    text-decoration: underline;
+}
+.like,
+.comment,
+.other,
+.share{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+/* sezione like, commenti, ecc.. */
+.interactions-bottons{
+    width: 92%;
+    margin: auto;
+    padding: 0 10px;
+    border-top: 1px solid rgb(202, 202, 202);
+    font-size: 15px;
+    color: #65686c;
+}
+.interactions-bottons,
+.i-botton-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.interactions-bottons img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.interactions-bottons p{
+    margin: 0;
+}
+.i-botton-box{
+    margin-top: 10px;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+.i-botton-box:hover{
+    background-color: #e4e4e5;
+}
+/* Terza sezione - opzioni */  
+.th-title{
+    padding-top: 75px;
+    width: 100%;
+}
+.th-title p{
+    margin: 0;
+    padding: 5px 3px;
+    border-radius: 5px;
+}
+.th-title .head-title{
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: #808080 ;
+}
+.th-title .option-title{
+    float: right;
+    font-size: 14px;
+    color: #0866ff; 
+}
+.option-title:hover{
+    background-color: #e6e7e7;
+}
+/* box richiesta d'amicizia */
+.friends-request-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 5px;
+    border-radius: 10px;
+}
+.friends-request-box:hover{
+    background-color: #e1e1e1;
+}
+.request-img{
+    display: flex;
+    flex-grow: 0;
+}
+.request-img img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 5px 10px 0 5px;
+}
+.request-info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.request-user{
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+}
+.name-request{
+    font-size: 15px;
+    margin: 5px;
+}
+.time-request{
+    color: #808080;
+    margin: 5px;
+}
+.request-botton{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 12px;
+}
+.request-botton button{
+    flex: 1;
+    padding: 8px 5px;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+}
+.request-first-btn{
+    background-color: #0866ff;
+    color: white;
+}
+.request-second-btn{
+    background-color: #d7d6d6;
+}
+.section-title{
+    text-align: left;
+    padding-left: 5px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #808080 ;
+    border-top: 2px solid rgb(203, 203, 203);
+}
+/* Birthday section */
+.birthday{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.birthday:hover{
+    background-color: #e1e1e1;
+}
+.birthday img{
+    width: 30px;    
+    height: 30px;
+    margin-right: 10px;
+}
+.birthday p{
+    margin: 0;
+}
+/* Sezione contatti */
+.contacts{
+    margin-top: 15px;
+    border-top: 2px solid #c1c1c1;
+}
+.contacts img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    padding: 2px;
+}
+.contacts img:hover{
+    background-color:  #e1e1e1 ;
+}
+
+.head-contacts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #808080;
+}
+.head-contacts > p{
+    margin-left: 5px;
+}
+/* Bottone in sticky */
+.newchat-btn{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 40px;
+    bottom: 25px;
+}
+.newchat-btn button{
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0px;
+    
+}
+.newchat-btn img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0px 0px 27px 2px rgba(0,0,0,0.51);
+    -webkit-box-shadow: 0px 0px 27px 2px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 0px 27px 2px rgba(0,0,0,0.51);
+}
+.newchat-btn img:hover{
+    background-color: #dddddd;
+}
