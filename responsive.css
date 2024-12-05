@@ -19,11 +19,14 @@
     }
 }
 @media (max-width: 515px){
-    .stories-container,
     .post-container,
     .image-post img,
     .state-container{
         width: 100%;
+    }
+    .stories-container{
+        width: 100%;
+        min-height: fit-content;
     }
     .first-stories-card,
     .stories-card{
